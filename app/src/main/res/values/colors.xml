@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="flax">#E0D68A</color>
+    <color name="dark_purple">#320A28</color>
+    <color name= "tyrian">#511730</color>
+    <color name="chestnut">#8E443D</color>
+    <color name="persian_orange">#CB9173</color>
+    <color name="red">#FF0000</color>
+
+</resources>
