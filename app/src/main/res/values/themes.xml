@@ -13,6 +13,24 @@
         <item name="colorOnBackground">@color/black</item>
         <item name="colorError">@color/red</item>
         <item name="colorOnError">@color/white</item>
+
+        <!-- Component Styles -->
+        <item name="materialCardViewStyle">@style/App.CardView</item>
+        <item name="materialButtonStyle">@style/App.Button</item>
+    </style>
+
+    <style name="App.Button" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/tyrian</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="App.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/flax</item>
+    </style>
+
+    <style name="App.TextAppearance.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textColor">@color/dark_purple</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="Theme.Act8" parent="Base.Theme.Act8" />
