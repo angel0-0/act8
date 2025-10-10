@@ -1,20 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/appcompat/lib/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    tools:ignore="ResAuto">
 
+    <!-- Título -->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textAppearance="@style/App.TextAppearance.Title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/actividad_08"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_purple"
+        android:fontFamily="@font/sans_bogle"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Campo para agregar número -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/n_mero_de_tel_fono"
+        app:boxStrokeColor="@color/tyrian"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:fontFamily="@font/sans_bogle" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Botón para agregar número -->
+    <Button
+        android:id="@+id/btnAddNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/agregar_n_mero"
+        android:backgroundTint="@color/tyrian"
+        android:textColor="@color/white"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Título de la lista -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/n_meros_monitoreados"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/dark_purple"
+        android:fontFamily="@font/sans_bogle"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Lista de números -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPhoneNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/persian_orange"
+        android:padding="8dp" />
+
+    <!-- Botón de testing (solo para desarrollo) -->
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🧪 Simular SMS"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/tyrian"
+        android:textColor="@color/white" />
+
+    <!-- Estado del monitoreo -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/tyrian"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/monitoreo_activo"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/sans_bogle" />
+
+    </LinearLayout>
+
+</LinearLayout>
