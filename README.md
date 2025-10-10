@@ -30,7 +30,7 @@ Eficiencia:
 Experiencia del usuario:  
 -> Los eventos deben mejorar la fluidez o la automatización, no interrumpir al usuario constantemente.  
 
-##¿Cómo se pueden utilizar hilos en Android para mejorar la eficiencia y la capacidad de respuesta de una aplicación, considerando diferentes tipos de tareas, la sincronización de datos y la experiencia del usuario?  
+## ¿Cómo se pueden utilizar hilos en Android para mejorar la eficiencia y la capacidad de respuesta de una aplicación, considerando diferentes tipos de tareas, la sincronización de datos y la experiencia del usuario?  
 -> Los hilos permiten ejecutar tareas en segundo plano para evitar que la interfaz principal (UI Thread) se bloquee. Esto mejora notablemente la eficiencia y capacidad de respuesta de la aplicación.  
 Tareas pesadas fuera del hilo principal:  
 -> Operaciones como descargas, lectura de base de datos o cálculos intensivos deben ir en hilos secundarios (Thread, HandlerThread, ExecutorService o Coroutine).  
